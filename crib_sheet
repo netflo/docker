@@ -24,3 +24,5 @@ docker swarm update --autolock=true
 
 unlocked with:   docker swarm unlock  (enter the key shared previously during autolock)
 
+increasing the cert expiry  rotation for the mutual TLS certs
+docker swarm update --cert-expiry=1h       more like in days          
