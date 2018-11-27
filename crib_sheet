@@ -14,3 +14,13 @@ get the join tokens with: docker swarm join-token (manager|worker)
 
 #rotate compromised join key with:        docker swarm join-token --rotate (manager|worker)
 
+
+#to avoid a manager restart to join a swarm automatically (need to enter the unlock key first):
+#or to avoid restoring an old backup to the swarm manager:
+
+docker swarm init --autolock
+or for existing ones:
+docker swarm update --autolock=true
+
+
+
