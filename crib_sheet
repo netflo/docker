@@ -22,5 +22,5 @@ docker swarm init --autolock
 or for existing ones:
 docker swarm update --autolock=true
 
-
+unlocked with:   docker swarm unlock  (enter the key shared previously during autolock)
 
