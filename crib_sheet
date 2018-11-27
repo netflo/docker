@@ -26,3 +26,14 @@ unlocked with:   docker swarm unlock  (enter the key shared previously during au
 
 increasing the cert expiry  rotation for the mutual TLS certs
 docker swarm update --cert-expiry=1h       more like in days          
+
+#########################
+
+networking
+
+docker network create (  -o encrypted     for encryption)
+MacVLAN allows to expose the containers directly as if normal hosts and therefore allow direct comms to legacy network devices outside containers
+but it needs promiscuous mode on the host NIC so wont work in public clouds
+if using public clouds or non promiscuous mode capable hosts then need to use  IPVLAN
+
+
