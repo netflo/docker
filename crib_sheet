@@ -55,4 +55,6 @@ docker service create -d --name service1 --replicas 2 --network golden-overlay a
 docker service ls
 docker service ps service1     (this tells us which node they run on)
 
-
+#### DNS and LB
+DNS is within the swarm
+bens are:  all instances register via DNS and a container can ping a service by name (and all is sorted out for us eg. DNS service and client/container setup when on the same network)
