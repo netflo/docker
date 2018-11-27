@@ -36,4 +36,4 @@ MacVLAN allows to expose the containers directly as if normal hosts and therefor
 but it needs promiscuous mode on the host NIC so wont work in public clouds
 if using public clouds or non promiscuous mode capable hosts then need to use  IPVLAN
 
-
+Note that on Windows:  bridge is called NAT ! (?)
