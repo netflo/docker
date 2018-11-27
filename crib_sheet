@@ -1,0 +1,16 @@
+
+
+
+
+### swarm
+
+docker swarm init
+
+investigate with:
+
+docker node ( ls | inspect ...)
+
+get the join tokens with: docker swarm join-token (manager|worker)
+
+#rotate compromised join key with:        docker swarm join-token --rotate (manager|worker)
+
