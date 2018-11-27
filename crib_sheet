@@ -46,4 +46,12 @@ allocate with:
 docker container run -d --network golden-gate -p 80:80 apache   (-d for daemon)
 
 
+creating a swarm overlahy network rather than local bridges:
+docker network create -d overlay golden-overlay
+
+creating a service with 2 replicas across a swarm and overlay:
+
+docker service create -d --name service1 --replicas 2 --network golden-overlay alpine sleep 1h
+
+
 
