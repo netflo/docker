@@ -17,5 +17,9 @@ note that a docker network ls   does not show that network until  it is required
 
 
 MACVLAN - gives it own IP + MAC   unlike for Windows:  l2bridge where they share a common MAC but requires promiscous mode
+if the physical i/f is eth0  then vlans are:  eth0.vlan_id  e.g.  eth0.100   
+Also need to provide the subnet range and the range of IPs that will not clash with the real world VLAN 100
+Great for migration IF the env supports  promiscuous mode.  e.g.  not public clouds or locked down ESX/VMWARE
+
 
 
