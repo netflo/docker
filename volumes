@@ -5,5 +5,5 @@ docker volume create ...
 
 /var/lib/docker             |   c:program\docker\windowsfilter
 
-docker container run -dit --name web1 --mount source=host_path,target=/inside_container_path  (dit = detached + interactive)
+docker container run -dit --name web1 --mount source=host_path,target=/inside_container_path   docker.io/image:tag (dit = detached + interactive)
 
