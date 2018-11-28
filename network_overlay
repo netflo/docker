@@ -16,4 +16,6 @@ issued on the manager node where issued.
 note that a docker network ls   does not show that network until  it is required (pruning takes place)
 
 
-MACVLAN - gives it own IP + MAC   unlike for Windows:  l2bridge where they share a common MAC
+MACVLAN - gives it own IP + MAC   unlike for Windows:  l2bridge where they share a common MAC but requires promiscous mode
+
+
