@@ -33,3 +33,22 @@ docker network create -d ipvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 \
   ipvlan_name_goes_here
 
 
+dns on 127.0.0.11:53 on every host and goes out to Internet if not found.
+based on host !
+
+a vip created for life when service created
+for inside traffic
+
+to cover external req. either  Routing Mesh  or  HTTP Routing Mesh
+ingress bridge overlay is used by routing mesh so that node hit where no worker dedicated to service redirecst
+routing limitation:  only 1 service listening on 1 layer4 port   + no HTTP app awareness
+
+HRM 
+Docker DC required (UCP)  from Docker EE  
+https? in the future
+enable HRM in UCP   creates new overlap  UCP-HRM  + Global UCP-HRM service (system service)
+then you createa a service  by attaching to UCP-HRM network + label (DNS hostname to associate with sevice)
+2 services can be on port 80 as long as diff hostname.
+UCP-HRM maps port 80 to the right service
+
+
