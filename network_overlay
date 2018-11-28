@@ -1,0 +1,2 @@
+
+bridge0 (br0) on all hosts are connecting to a local VTEP (VxLAN Tunnel End Point) and a mesh is set up  uses UDP/4789 on the transport/underlay  
