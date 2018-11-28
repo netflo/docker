@@ -28,8 +28,8 @@ cannot ping parent interface
 
 docker network create -d ipvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 \
   --ip-range=192.168.1.0/29 \ (to let docker know what IP subnet to use to allocate IPs from our main subnet e.g.192.168.1.0/24 to avoid clashes )
-  -o ipvlan_mode=l2  (layer2 is the default so could be left out)
-  
-  
+  -o ipvlan_mode=l2 \ (layer2 is the default so could be left out)
+  -o parent=eth0 \ (this is the parent i/f)
+  ipvlan_name_goes_here
 
 
