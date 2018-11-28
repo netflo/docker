@@ -20,6 +20,14 @@ MACVLAN - gives it own IP + MAC   unlike for Windows:  l2bridge where they share
 if the physical i/f is eth0  then vlans are:  eth0.vlan_id  e.g.  eth0.100   
 Also need to provide the subnet range and the range of IPs that will not clash with the real world VLAN 100
 Great for migration IF the env supports  promiscuous mode.  e.g.  not public clouds or locked down ESX/VMWARE
+cannot ping parent interface
+
+IPVLAN - only get their own IP not MAC  like l2bridge but it is not a bridge
+dont work with DHCP given dup. mac  unless client IDs...
+cannot ping parent interface
+
+docker network create -d ipvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 \
+  ip-range=192.168.1.0/29  (to let docker know what IP subnet to use to allocate IPs from our main subnet e.g.192.168.1.0/24 to avoid clashes )
 
 
 
