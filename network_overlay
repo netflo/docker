@@ -49,6 +49,7 @@ https? in the future
 enable HRM in UCP   creates new overlap  UCP-HRM  + Global UCP-HRM service (system service)
 then you createa a service  by attaching to UCP-HRM network + label (DNS hostname to associate with sevice)
 2 services can be on port 80 as long as diff hostname.
-UCP-HRM maps port 80 to the right service
+UCP-HRM maps port 80 to the right service???? / UCP HRM can only target 1 TCP port for this http inspection??? but offers more ports???
 
-
+to publish need to use the label of:   com.docker.ucp.mesh.http  with the value set to port=fqdn e.g.  8080=http://host1.cisco.com
+8080 is the port on  the container given UCP is listening on port 80 (unless changed)
