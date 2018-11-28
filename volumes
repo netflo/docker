@@ -1,0 +1,9 @@
+
+volume is a path on the local host (could bea remote mount too)
+
+docker volume create ...
+
+/var/lib/docker             |   c:program\docker\windowsfilter
+
+docker container run -dit --name web1 --mount source=host_path,target=/inside_container_path  (dit = detached + interactive)
+
