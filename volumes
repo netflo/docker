@@ -8,3 +8,17 @@ docker volume create ...
 docker container run -dit --name web1 --mount source=host_path,target=/vol_name_2be_stored_inside_container_path   docker.io/image:tag (dit = detached + interactive)
 
 dettached from container so persists
+
+
+
+SECRETS
+
+to help manage secrets given short lived
+grant a service access to a secret
+least priviledge model where only those hosts running the service containers get the secret.
+files are decrypted and stored on the /run/secrets  
+not persistent given it is a  tmpfs volume type so in memory only
+
+docker secret create ....
+
+docker service create --name serv1 --secret sec1  --replicas 3
