@@ -11,3 +11,9 @@ For SWARM mode, other ports required between hosts in case of f/w are 7946/tcp +
 create a network overlay with:
 
 docker network create -d overlay web_overlay_bridge_lan       (-d  is for specifying driver of overlay - default = bridge)
+
+issued on the manager node where issued.
+note that a docker network ls   does not show that network until  it is required (pruning takes place)
+
+
+MACVLAN - gives it own IP + MAC   unlike for Windows:  l2bridge where they share a common MAC
