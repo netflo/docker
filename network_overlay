@@ -45,7 +45,7 @@ routing limitation:  only 1 service listening on 1 layer4 port   + no HTTP app a
 
 HRM 
 Docker DC required (UCP)  from Docker EE  
-https? in the future
+https also included
 enable HRM in UCP   creates new overlap  UCP-HRM  + Global UCP-HRM service (system service)
 then you createa a service  by attaching to UCP-HRM network + label (DNS hostname to associate with sevice)
 2 services can be on port 80 as long as diff hostname.
