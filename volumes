@@ -19,6 +19,13 @@ least priviledge model where only those hosts running the service containers get
 files are decrypted and stored on the /run/secrets  
 not persistent given it is a  tmpfs volume type so in memory only
 
-docker secret create ....
+docker secret create my_secret_name ./file_with_secrets
+encrypted and stored in the store raft
 
 docker service create --name serv1 --secret sec1  --replicas 3
+
+secrets flushed from memory when  docker service rm
+
+note on windows:  not persistent so want to store on encrypted disk / bitlocker?
+
+UCP = webUI for Ops teams 
