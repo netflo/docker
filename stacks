@@ -1,0 +1,38 @@
+
+docker stack deploy   (to the swarm and needs are recorded into raft group (managers))
+
+deploy and maintains eg. if a host dies the missing containers are moved to surviving nodes
+
+self documenting given you define the entire stack, volumes etc...  + git for change control
+
+
+example of a voting app  stackfile.yml  - 4 top levels:
+version: (of the stack file)
+services:
+   redis:
+   db:
+   vote:
+   result:
+network:
+   frontend:
+   backend:
+volumes:
+   db-data:
+   
+
+Compose was not native!  new is stack
+
+docker stack deploy -c stackfile.yml
+
+docker stack ps voter
+=>shows desired state and stack status
+
+docker stack services voter
+
+docker service scale voter_note=20 
+imperative scaling not helping with stack files as it will get out of sync.
+Should update stackfile  and then just run the new version of the stack file and it will
+apply deltas
+
+
+
