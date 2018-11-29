@@ -1,0 +1,37 @@
+
+UCP - (Universal) control plane
+DTR - Docker Trusted Registry
+RBAC
+Image scanning
+
+CE = monthly release
+EE = quaterly + certif + points above etc...
+
+UCP
+UCP is a service/containers running on your EE engine
+if working being a NAT device , you may need to tick the Custom Listen+Advertise Address to add new worker nodes, if the IP used for join is not the one to use externally.
+a UCP cluster is just a swarm cluster!
+
+DTR
+through  GUI can get the containers to install to get DTR (also running in the cluster)
+it is possible to image scan by manual sync with tar files rather than internet connections.
+to push an image, we need to allocate a tag as it is used to place in reg:
+
+docker image tag web1 my-registry-server.blah/flo/web1:latest
+docker login my-registry-server.blah   + enter user/pass
+docker image push web1 my-registry-server.blah/flo/web1:latest
+
+RBAC
+subjects=people
+roles=permissions
+collections=resources
+Grants are contracts between the above 3
+
+with image on scan for  push , it is possible to see all known vulnerabilities in the image
+
+HRM/HTTP Routing Mesh - EE
+
+
+
+
+
