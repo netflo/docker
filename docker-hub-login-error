@@ -1,0 +1,8 @@
+
+error:
+docker login --username=blah
+Error saving credentials: error storing credentials - err: exit status 1, out: `Cannot autolaunch D-Bus without X11 $DISPLAY`
+
+sudo apt install gnupg2 pass
+from: https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account
+
