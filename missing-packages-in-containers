@@ -1,0 +1,11 @@
+
+if uses apt:
+
+apt-get -qq update
+apt-get install -y curl
+
+
+
+FROM ...
+RUN apt-get -qq update && apt-get install -y curl
+
